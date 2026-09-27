@@ -1,0 +1,17 @@
+<Solution>
+  <Folder Name="/.github/">
+    <File Path="copilot-instructions.md" />
+  </Folder>
+  <Folder Name="/.github/instructions/">
+    <File Path="banking-csharp.instructions.md" />
+    <File Path="banking-web.instructions.md" />
+  </Folder>
+  <Folder Name="/.github/skills/" />
+  <Folder Name="/.github/skills/banking-balance-check/">
+    <File Path="SKILL.md" />
+  </Folder>
+  <Folder Name="/docs/">
+    <File Path="rules.md" />
+  </Folder>
+  <Project Path="BankingApi/BankingApi.csproj" />
+</Solution>

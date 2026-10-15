@@ -1,0 +1,74 @@
+Selenium => Enterprise application (scripting JavaScript is ok, It does not support Typescript)
+
+Playwright ==> for modern application (typescript,
+
+will playwright support on edge?
+
+Playwright will work on Automation
+
+Auto waiting 
+==========
+
+in selenium =>Explicit wait
+
+
+Locators 
+===========
+based on role,getbytext, getByLabel, CssXpath, 
+preferable GetByRole,GetByAccessability and accracy
+
+
+Parellel Execution:
+==================
+
+in selenium  selenium Grid => Explicitly
+
+
+
+
+4 components
+=============
+Selenium IDE  ==>Record and play back
+Selenium RC ==> 1.0 ==> 
+selenium web Driver, 2.0 ==>
+Selenium Grid (support) ==> Parallel execution (hub nd node server is different place)
+
+Selenium 4.0 => 
+
+
+
+in Playwright ==> in built option is there parallel execution
+
+
+network interseption mechanism 
+Add ons:
+Screnshot, debugging feature , we need to write external tool
+
+
+in Playwright ==> Video, snippet code, codegen (after initiate in bg in take recording it will generate the code) when it will be helpful we can identify the locators  easily  and we can increase the speed.
+
+
+React and Angular application, debugging ,parallel, faster execution.(browser communication architecture 
+Selenium web driver => 
+
+PW ==> pw have own arch it call controller directly
+
+
+await,
+
+while multiple user logged in same browser is possible in PW. Isolated session. Regional mgr, Branch Mgr needs to give an approval parallelly  it will be easy in PW.
+
+
+Framework  dependency is less in PW. 
+
+default reporting
+
+
+
+in selenium, framework, default reporting,
+
+
+
+
+
+

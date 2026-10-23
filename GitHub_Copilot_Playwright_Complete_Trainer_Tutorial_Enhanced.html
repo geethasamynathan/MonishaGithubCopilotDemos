@@ -1,0 +1,321 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>GitHub Copilot + C# Playwright | Full Trainer Workshop + Copilot Feature Labs</title><style>
+:root{--bg:#f5f7fb;--card:#fff;--ink:#17243a;--muted:#5d6d81;--accent:#1658af;--border:#dce3ef;--code:#111b2e}*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font:15px/1.65 system-ui,Segoe UI,Arial,sans-serif;color:var(--ink);background:var(--bg)}header{padding:24px 30px;background:linear-gradient(110deg,#0d2444,#154e88);color:white}header h1{margin:4px 0;font-size:26px;line-height:1.3}header p{margin:8px 0 0;color:#dceafd}header .top{font-size:12px;letter-spacing:2px;color:#bbdefb}main{display:grid;grid-template-columns:275px minmax(0,1fr);gap:22px;max-width:1450px;margin:20px auto;padding:0 18px}aside{position:sticky;top:14px;height:calc(100vh - 28px);overflow:auto;background:white;border:1px solid var(--border);border-radius:13px;padding:18px}aside h3{margin:3px 0 15px;font-size:13px;letter-spacing:1px;text-transform:uppercase;color:var(--muted)}nav{display:grid;gap:2px}nav a{font-size:13px;padding:9px 10px;color:#315070;text-decoration:none;border-radius:8px}nav a:hover,nav a.active{background:#e9f2ff;color:#164a89}#search{width:100%;padding:10px;border:1px solid var(--border);border-radius:9px;margin-bottom:12px}.lesson{background:var(--card);padding:30px 34px;border:1px solid var(--border);border-radius:14px;margin-bottom:20px;scroll-margin-top:12px;box-shadow:0 3px 20px #15294b08}.lesson h2{margin:0 0 18px;line-height:1.25;font-size:25px}.lesson h3{margin:26px 0 9px;font-size:17px;color:#194879}.lesson p{margin:11px 0}.kicker{font-size:11px;letter-spacing:1.5px;color:#6a87aa;font-weight:800;margin-bottom:8px}pre{background:var(--code);color:#dce9fc;border-radius:0 0 9px 9px;overflow:auto;padding:17px 18px;font-size:12.5px;line-height:1.6;margin:0 0 18px;white-space:pre}code{font-family:Consolas,'Cascadia Code',monospace}p code,li code{color:#9f3d2e;background:#fbefed;padding:2px 4px;border-radius:4px}.codebar{display:flex;justify-content:space-between;align-items:center;background:#273a58;color:#bed7fb;border-radius:9px 9px 0 0;padding:7px 12px;font-size:11px;font-weight:750;letter-spacing:1px}.codebar button,.prompthead button{background:#e4efff;border:0;border-radius:6px;padding:6px 11px;cursor:pointer;font-weight:650;color:#14457a}.prompt{margin:16px 0;border:1px solid #bfcef0;border-radius:10px;overflow:hidden}.prompthead{display:flex;justify-content:space-between;align-items:center;background:#e8f1ff;color:#264e81;padding:10px 13px;font-size:11px;letter-spacing:1px;font-weight:750}.prompt pre{background:#f7faff;color:#21384f;border-radius:0;white-space:pre-wrap;margin:0;font-size:13px}.note{padding:13px 16px;border-left:4px solid #e5ad2a;background:#fff8e5;margin:16px 0;border-radius:6px}.flow{display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin:23px 0}.flow span{border:1px solid #b6cbe6;background:#ebf4ff;border-radius:8px;padding:9px;font-size:12px;font-weight:700}.flow b{color:#3773b7}table{border-collapse:collapse;width:100%;margin:16px 0;font-size:13px}th,td{border:1px solid #d7e1ef;padding:10px 12px;vertical-align:top;text-align:left}th{background:#edf3fc;color:#274d7d}.tree{font:13px/2 Consolas,monospace;white-space:normal;background:#edf4fc;padding:20px;border-radius:9px;color:#21456d}.bottomnav{display:flex;justify-content:space-between;gap:20px;margin-top:30px;border-top:1px solid var(--border);padding-top:15px}.bottomnav a{text-decoration:none;color:#1558a4;font-weight:700}.checks{display:grid;gap:8px;padding:12px;border-radius:9px;background:#f1f5fb}.checks label{display:flex;align-items:center;gap:9px}#content{min-width:0}footer{text-align:center;padding:20px;color:var(--muted);font-size:12px}.menu-toggle{display:none}a{color:#155cab}@media(max-width:850px){main{grid-template-columns:1fr}aside{height:auto;position:static;max-height:350px}.lesson{padding:24px 18px}.menu-toggle{display:inline-block}header{padding:20px}header h1{font-size:23px}}@media print{body{background:white}header{background:white;color:black;padding:10px 0}header p{color:#333}aside,.bottomnav,.copy,.prompthead button{display:none!important}main{display:block;margin:0;padding:0}.lesson{box-shadow:none;border:0;break-before:page;padding:10px 0}pre{white-space:pre-wrap;word-break:break-word}a{color:black;text-decoration:none}}
+</style></head><body><header><div class="top">INSTRUCTOR-LED · HANDS-ON AUTOMATION WORKSHOP</div><h1>GitHub Copilot + C# Playwright + NUnit</h1><p>From Login to Book Cart Validation — plus advanced Copilot context, slash commands, agent workflows, custom instructions and debugging</p></header><main><aside><h3>Course navigation</h3><input id="search" placeholder="Filter topics…" aria-label="Filter topics"><nav><a href="#overview" data-target="overview">01 · Training Overview</a><a href="#setup" data-target="setup">02 · Lab Setup</a><a href="#login" data-target="login">03 · Login Test — No POM</a><a href="#books" data-target="books">04 · Find a Book</a><a href="#cart" data-target="cart">05 · Add to Cart and Verify</a><a href="#architecture" data-target="architecture">06 · POM Architecture</a><a href="#pages" data-target="pages">07 · Implement Page Objects</a><a href="#test" data-target="test">08 · Complete NUnit Scenario</a><a href="#data" data-target="data">09 · Models and External Test Data</a><a href="#debug" data-target="debug">10 · Industrial Challenges &amp; Fixes</a><a href="#instructions" data-target="instructions">11 · Copilot Instructions &amp; Review</a><a href="#comparison" data-target="comparison">12 · Selenium vs Playwright</a><a href="#delivery" data-target="delivery">13 · 3-Hour Delivery Plan</a><a href="#references" data-target="references">14 · References &amp; Trainer Notes</a><a href="#copilot-features" data-target="copilot-features">15 · Copilot Feature Map</a><a href="#copilot-context" data-target="copilot-context">16 · Context: #file / #codebase</a><a href="#copilot-commands" data-target="copilot-commands">17 · Slash Commands</a><a href="#copilot-modes" data-target="copilot-modes">18 · Ask / Inline / Agent</a><a href="#copilot-prompts" data-target="copilot-prompts">19 · Instructions & Prompts</a><a href="#copilot-advanced" data-target="copilot-advanced">20 · Advanced Features</a><a href="#copilot-challenges" data-target="copilot-challenges">21 · Failure Labs</a><a href="#copilot-schedule" data-target="copilot-schedule">22 · Delivery Plan</a></nav><p style="font-size:12px;color:var(--muted);margin-top:20px">Single-file, offline-readable tutorial. Website links and live tests require internet access.</p></aside><div id="content"><section id="overview" class="lesson"><div class="kicker">TRAINER WORKSHOP</div><h2>01 · Training Overview</h2><p><strong>Audience:</strong> Experienced C# Selenium automation engineers. <strong>Application:</strong> <a href="https://demowebshop.tricentis.com/" target="_blank">Tricentis Demo Web Shop</a>. <strong>Stack:</strong> C#, .NET 10, Microsoft.Playwright.NUnit, NUnit, VS Code and GitHub Copilot.</p><p><strong>Starting point:</strong> Registration is already complete. Continue with existing demo account → login → Books → Computing and Internet → Add to cart → validate quantity and product → Page Object Model → data-driven testing → troubleshooting.</p><div class="flow"><span>Registered User</span><b>→</b><span>Login</span><b>→</b><span>Books</span><b>→</b><span>Select Book</span><b>→</b><span>Add to Cart</span><b>→</b><span>Assert Cart</span></div><h3>Key learning outcomes</h3><ul><li>Use Copilot Ask for architecture explanations and Agent/Edit for incremental code changes.</li><li>Differentiate Copilot-generated code from verified browser automation.</li><li>Apply scoped semantic locators, built-in actionability, retrying assertions, and test isolation.</li><li>Refactor proven scenarios into Base / Pages / Tests / Models / TestData / Utilities.</li><li>Review, debug, and maintain code using industry-standard SDET practices.</li></ul><div class="bottomnav"><a href="#overview" style="visibility:hidden">← Previous</a><a href="#setup">Next →</a></div></section><section id="setup" class="lesson"><div class="kicker">TRAINER WORKSHOP</div><h2>02 · Lab Setup</h2><p>Create an NUnit project and add Playwright integration. The demo uses .NET 10; adapt the target to the SDK installed in your lab.</p><div class="codebar"><span>POWERSHELL</span><button class="copy" onclick="copyPrev(this)">Copy</button></div><pre><code>dotnet new nunit -n WebShop.Playwright -f net10.0
+cd WebShop.Playwright
+dotnet add package Microsoft.Playwright.NUnit
+dotnet build</code></pre><p>Install Chromium (requires PowerShell 7 / <code>pwsh</code>):</p><div class="codebar"><span>POWERSHELL</span><button class="copy" onclick="copyPrev(this)">Copy</button></div><pre><code>pwsh ./bin/Debug/net10.0/playwright.ps1 install chromium
+dotnet test</code></pre><div class="note"><strong>Trainer checkpoint:</strong> Default NUnit template test passes before website code is introduced.</div><div class="prompt"><div class="prompthead">GITHUB COPILOT PROMPT <button onclick="copyPrompt(this)">Copy prompt</button></div><pre>Inspect the current NUnit project. Explain Microsoft.Playwright.NUnit, PageTest vs BrowserTest, test discovery, browser contexts, and how they compare to Selenium WebDriver. Do not modify files. Explain before implementation.</pre></div><div class="bottomnav"><a href="#overview">← Previous</a><a href="#login">Next →</a></div></section><section id="login" class="lesson"><div class="kicker">TRAINER WORKSHOP</div><h2>03 · Login Test — No POM</h2><p>Open <a target="_blank" href="https://demowebshop.tricentis.com/login">/login</a> manually. Inspect Email, Password, and Log in controls before accepting any Copilot locator.</p><div class="prompt"><div class="prompthead">GITHUB COPILOT PROMPT <button onclick="copyPrompt(this)">Copy prompt</button></div><pre>Create a single C# Playwright NUnit test Login_WithValidCredentials_ShouldSucceed for https://demowebshop.tricentis.com/login. Use PageTest, async/await, environment variables WEBSHOP_EMAIL and WEBSHOP_PASSWORD, and Playwright retrying assertions. Verify the authenticated account email. Do not use Thread.Sleep, Selenium APIs, hardcoded credentials, or POM yet. Explain locator choices and edit only the test file.</pre></div><div class="codebar"><span>CSHARP</span><button class="copy" onclick="copyPrev(this)">Copy</button></div><pre><code>using Microsoft.Playwright;
+using Microsoft.Playwright.NUnit;
+using NUnit.Framework;
+
+namespace WebShop.Playwright.Tests;
+
+[TestFixture]
+public class LoginTests : PageTest
+{
+    [Test]
+    public async Task Login_WithValidCredentials_ShouldSucceed()
+    {
+        var email = Environment.GetEnvironmentVariable(&quot;WEBSHOP_EMAIL&quot;)
+            ?? throw new InvalidOperationException(&quot;WEBSHOP_EMAIL missing&quot;);
+        var password = Environment.GetEnvironmentVariable(&quot;WEBSHOP_PASSWORD&quot;)
+            ?? throw new InvalidOperationException(&quot;WEBSHOP_PASSWORD missing&quot;);
+
+        await Page.GotoAsync(&quot;https://demowebshop.tricentis.com/login&quot;);
+        await Page.Locator(&quot;#Email&quot;).FillAsync(email);
+        await Page.Locator(&quot;#Password&quot;).FillAsync(password);
+        await Page.Locator(&quot;input.login-button&quot;).ClickAsync();
+        await Expect(Page.Locator(&quot;.header-links .account&quot;))
+            .ToHaveTextAsync(email);
+    }
+}</code></pre><h3>Run the login test</h3><div class="codebar"><span>POWERSHELL</span><button class="copy" onclick="copyPrev(this)">Copy</button></div><pre><code>$env:WEBSHOP_EMAIL = &quot;your-registered-email@example.com&quot;
+$env:WEBSHOP_PASSWORD = &quot;your-demo-password&quot;
+$env:HEADED = &quot;1&quot;
+dotnet test --filter &quot;Name=Login_WithValidCredentials_ShouldSucceed&quot;</code></pre><div class="note">Validate sample selectors against the live DOM. The selectors shown are illustrative expected site selectors, not selectors confirmed by executing the browser test. Use a dedicated test account and do not commit secrets.</div><div class="bottomnav"><a href="#setup">← Previous</a><a href="#books">Next →</a></div></section><section id="books" class="lesson"><div class="kicker">TRAINER WORKSHOP</div><h2>04 · Find a Book</h2><p>Extend the proven login test without rewriting the working steps. Scope the <strong>Books</strong> link to the top menu because category links may appear more than once.</p><div class="prompt"><div class="prompthead">GITHUB COPILOT PROMPT <button onclick="copyPrompt(this)">Copy prompt</button></div><pre>Read my passing login test. After successful login, click Books in the main menu, locate the exact title Computing and Internet, open its product page, and assert its title and stock status. Keep working steps unchanged. Use unique locators and retrying assertions. Avoid First/Nth shortcuts, XPath and sleeps. Explain failure modes.</pre></div><div class="codebar"><span>CSHARP</span><button class="copy" onclick="copyPrev(this)">Copy</button></div><pre><code>await Page.Locator(&quot;.top-menu&quot;)
+    .GetByRole(AriaRole.Link, new() { Name = &quot;Books&quot;, Exact = true })
+    .ClickAsync();
+
+await Expect(Page.Locator(&quot;h1&quot;)).ToHaveTextAsync(&quot;Books&quot;);
+
+await Page.GetByRole(AriaRole.Link, new()
+{
+    Name = &quot;Computing and Internet&quot;, Exact = true
+}).ClickAsync();
+
+await Expect(Page.Locator(&quot;.product-name h1&quot;))
+    .ToHaveTextAsync(&quot;Computing and Internet&quot;);
+await Expect(Page.GetByText(&quot;In stock&quot;)).ToBeVisibleAsync();</code></pre><div class="note"><strong>Intentional failure:</strong> Replace the scoped Books locator with <code>Page.GetByText("Books")</code>. Discuss strict mode, duplicate elements, and why <code>First</code> can conceal brittle logic.</div><div class="prompt"><div class="prompthead">GITHUB COPILOT PROMPT <button onclick="copyPrompt(this)">Copy prompt</button></div><pre>My Playwright locator for Books causes a strict mode violation. Explain why it matches multiple elements and propose a uniquely scoped semantic locator. Do not fix it using First or Nth unless the DOM provides no better alternative.</pre></div><div class="bottomnav"><a href="#login">← Previous</a><a href="#cart">Next →</a></div></section><section id="cart" class="lesson"><div class="kicker">TRAINER WORKSHOP</div><h2>05 · Add to Cart and Verify</h2><p>The goal is not simply to click a button. Assert confirmation, the exact product, and quantity in the shopping cart.</p><div class="prompt"><div class="prompthead">GITHUB COPILOT PROMPT <button onclick="copyPrompt(this)">Copy prompt</button></div><pre>Extend my passing Playwright scenario: on the Computing and Internet detail page, set quantity 1, add to cart, check success notification, open Shopping cart, verify the exact product row and quantity. Use Playwright auto-wait and retrying assertions. Do not use Thread.Sleep. Differentiate technical actions from business assertions.</pre></div><div class="codebar"><span>CSHARP</span><button class="copy" onclick="copyPrev(this)">Copy</button></div><pre><code>await Page.Locator(&quot;input.qty-input&quot;).FillAsync(&quot;1&quot;);
+await Page.Locator(&quot;.add-to-cart-panel input[type=&#x27;button&#x27;]&quot;)
+    .ClickAsync();
+
+await Expect(Page.Locator(&quot;.bar-notification.success&quot;))
+    .ToBeVisibleAsync();
+
+await Page.GotoAsync(&quot;https://demowebshop.tricentis.com/cart&quot;);
+
+var productRow = Page.Locator(&quot;tr.cart-item-row&quot;).Filter(new()
+{
+    Has = Page.GetByRole(AriaRole.Link, new()
+    {
+        Name = &quot;Computing and Internet&quot;, Exact = true
+    })
+});
+await Expect(productRow).ToHaveCountAsync(1);
+await Expect(productRow.Locator(&quot;input.qty-input&quot;))
+    .ToHaveValueAsync(&quot;1&quot;);</code></pre><div class="note"><strong>State isolation:</strong> Cart quantity = 1 assumes the account begins with an empty cart for this book. Clear the demo account cart before the session; do not silently delete other users’ cart data. Reconfirm all cart selectors in DevTools.</div><h3>Business verification checklist</h3><ul><li>Login succeeded (matching account email).</li><li>Correct book detail page opened.</li><li>Add to Cart action produced success feedback.</li><li>Exactly one matching product row is present.</li><li>Quantity for that row is 1.</li></ul><div class="bottomnav"><a href="#books">← Previous</a><a href="#architecture">Next →</a></div></section><section id="architecture" class="lesson"><div class="kicker">TRAINER WORKSHOP</div><h2>06 · POM Architecture</h2><p>Refactor only after the single working scenario is established. The structure mirrors your supplied slide.</p><div class="tree">WebShop.Playwright/<br>├── Base/TestBase.cs<br>├── Pages/LoginPage.cs<br>├── Pages/HomePage.cs<br>├── Pages/BooksPage.cs<br>├── Pages/ProductPage.cs<br>├── Pages/CartPage.cs<br>├── Tests/LoginTests.cs<br>├── Tests/ShoppingCartTests.cs<br>├── Models/Product.cs<br>├── TestData/products.json<br>├── Utilities/TestDataLoader.cs<br>└── .github/copilot-instructions.md</div><table><tr><th>Folder</th><th>Responsibility</th></tr><tr><td>Base</td><td>Test setup, shared configuration, and common helpers</td></tr><tr><td>Pages</td><td>Locators and page interaction methods</td></tr><tr><td>Tests</td><td>Scenario flows, assertions and orchestration</td></tr><tr><td>Models</td><td>Strongly typed representations of test data/domain objects</td></tr><tr><td>TestData</td><td>External scenario data and datasets</td></tr><tr><td>Utilities</td><td>Reusable supporting functionality</td></tr></table><div class="prompt"><div class="prompthead">GITHUB COPILOT PROMPT <button onclick="copyPrompt(this)">Copy prompt</button></div><pre>Review the passing UI test and propose incremental POM refactoring. Inject IPage via constructors; keep locators/actions in Pages, business assertions in Tests; avoid duplicate browser lifecycle, sleeps and behavior changes. Start with LoginPage.cs only. Explain the change and ask me to review the diff before proceeding to each next page.</pre></div><div class="bottomnav"><a href="#cart">← Previous</a><a href="#pages">Next →</a></div></section><section id="pages" class="lesson"><div class="kicker">TRAINER WORKSHOP</div><h2>07 · Implement Page Objects</h2><h3>Base/TestBase.cs</h3><div class="codebar"><span>CSHARP</span><button class="copy" onclick="copyPrev(this)">Copy</button></div><pre><code>using Microsoft.Playwright.NUnit;
+
+namespace WebShop.Playwright.Base;
+public abstract class TestBase : PageTest
+{
+    protected const string BaseUrl = &quot;https://demowebshop.tricentis.com&quot;;
+    protected static string RequiredEnvironment(string name) =&gt;
+        Environment.GetEnvironmentVariable(name)
+        ?? throw new InvalidOperationException($&quot;Environment variable missing: {name}&quot;);
+}</code></pre><h3>Pages/LoginPage.cs</h3><div class="codebar"><span>CSHARP</span><button class="copy" onclick="copyPrev(this)">Copy</button></div><pre><code>using Microsoft.Playwright;
+namespace WebShop.Playwright.Pages;
+public class LoginPage
+{
+    private readonly IPage _page;
+    public LoginPage(IPage page) =&gt; _page = page;
+    private ILocator Email =&gt; _page.Locator(&quot;#Email&quot;);
+    private ILocator Password =&gt; _page.Locator(&quot;#Password&quot;);
+    private ILocator LoginButton =&gt; _page.Locator(&quot;input.login-button&quot;);
+    public ILocator LoggedInAccount =&gt; _page.Locator(&quot;.header-links .account&quot;);
+    public Task OpenAsync() =&gt; _page.GotoAsync(&quot;https://demowebshop.tricentis.com/login&quot;);
+    public async Task LoginAsync(string email, string password)
+    {
+        await Email.FillAsync(email);
+        await Password.FillAsync(password);
+        await LoginButton.ClickAsync();
+    }
+}</code></pre><h3>Pages/HomePage.cs</h3><div class="codebar"><span>CSHARP</span><button class="copy" onclick="copyPrev(this)">Copy</button></div><pre><code>using Microsoft.Playwright;
+namespace WebShop.Playwright.Pages;
+public class HomePage
+{
+    private readonly IPage _page;
+    public HomePage(IPage page) =&gt; _page = page;
+    public Task NavigateToBooksAsync() =&gt; _page.Locator(&quot;.top-menu&quot;)
+        .GetByRole(AriaRole.Link, new() { Name = &quot;Books&quot;, Exact = true }).ClickAsync();
+}</code></pre><h3>Pages/BooksPage.cs</h3><div class="codebar"><span>CSHARP</span><button class="copy" onclick="copyPrev(this)">Copy</button></div><pre><code>using Microsoft.Playwright;
+namespace WebShop.Playwright.Pages;
+public class BooksPage
+{
+    private readonly IPage _page;
+    public BooksPage(IPage page) =&gt; _page = page;
+    public Task OpenBookAsync(string title) =&gt; _page.GetByRole(AriaRole.Link,
+        new() { Name = title, Exact = true }).ClickAsync();
+}</code></pre><h3>Pages/ProductPage.cs</h3><div class="codebar"><span>CSHARP</span><button class="copy" onclick="copyPrev(this)">Copy</button></div><pre><code>using Microsoft.Playwright;
+namespace WebShop.Playwright.Pages;
+public class ProductPage
+{
+    private readonly IPage _page;
+    public ProductPage(IPage page) =&gt; _page = page;
+    public ILocator ProductTitle =&gt; _page.Locator(&quot;.product-name h1&quot;);
+    public ILocator SuccessNotification =&gt; _page.Locator(&quot;.bar-notification.success&quot;);
+    public async Task AddToCartAsync(int quantity)
+    {
+        if (quantity &lt; 1) throw new ArgumentOutOfRangeException(nameof(quantity));
+        await _page.Locator(&quot;input.qty-input&quot;).FillAsync(quantity.ToString());
+        await _page.Locator(&quot;.add-to-cart-panel input[type=&#x27;button&#x27;]&quot;).ClickAsync();
+    }
+}</code></pre><h3>Pages/CartPage.cs</h3><div class="codebar"><span>CSHARP</span><button class="copy" onclick="copyPrev(this)">Copy</button></div><pre><code>using Microsoft.Playwright;
+namespace WebShop.Playwright.Pages;
+public class CartPage
+{
+    private readonly IPage _page;
+    public CartPage(IPage page) =&gt; _page = page;
+    public Task OpenAsync() =&gt; _page.GotoAsync(&quot;https://demowebshop.tricentis.com/cart&quot;);
+    public ILocator ProductRow(string title) =&gt; _page.Locator(&quot;tr.cart-item-row&quot;)
+        .Filter(new() { Has = _page.GetByRole(AriaRole.Link,
+            new() { Name = title, Exact = true }) });
+    public ILocator ProductQuantity(string title) =&gt;
+        ProductRow(title).Locator(&quot;input.qty-input&quot;);
+}</code></pre><div class="bottomnav"><a href="#architecture">← Previous</a><a href="#test">Next →</a></div></section><section id="test" class="lesson"><div class="kicker">TRAINER WORKSHOP</div><h2>08 · Complete NUnit Scenario</h2><p>Tests should orchestrate page objects and own the business assertions.</p><div class="codebar"><span>CSHARP</span><button class="copy" onclick="copyPrev(this)">Copy</button></div><pre><code>using Microsoft.Playwright.NUnit;
+using NUnit.Framework;
+using WebShop.Playwright.Base;
+using WebShop.Playwright.Pages;
+
+namespace WebShop.Playwright.Tests;
+
+[TestFixture]
+public class ShoppingCartTests : TestBase
+{
+    [Test]
+    public async Task RegisteredUser_CanAddBookToCart()
+    {
+        string email = RequiredEnvironment(&quot;WEBSHOP_EMAIL&quot;);
+        string password = RequiredEnvironment(&quot;WEBSHOP_PASSWORD&quot;);
+        string title = &quot;Computing and Internet&quot;;
+        var login = new LoginPage(Page);
+        var home = new HomePage(Page);
+        var books = new BooksPage(Page);
+        var product = new ProductPage(Page);
+        var cart = new CartPage(Page);
+
+        await login.OpenAsync();
+        await login.LoginAsync(email, password);
+        await Expect(login.LoggedInAccount).ToHaveTextAsync(email);
+
+        await home.NavigateToBooksAsync();
+        await books.OpenBookAsync(title);
+        await Expect(product.ProductTitle).ToHaveTextAsync(title);
+
+        await product.AddToCartAsync(1);
+        await Expect(product.SuccessNotification).ToBeVisibleAsync();
+        await cart.OpenAsync();
+        await Expect(cart.ProductRow(title)).ToHaveCountAsync(1);
+        await Expect(cart.ProductQuantity(title)).ToHaveValueAsync(&quot;1&quot;);
+    }
+}</code></pre><div class="note">Do not run the independent LoginTests and ShoppingCartTests against shared cart state in uncontrolled parallel runs. The scenario is a reference implementation pending live DOM and account verification.</div><div class="bottomnav"><a href="#pages">← Previous</a><a href="#data">Next →</a></div></section><section id="data" class="lesson"><div class="kicker">TRAINER WORKSHOP</div><h2>09 · Models and External Test Data</h2><h3>Models/Product.cs</h3><div class="codebar"><span>CSHARP</span><button class="copy" onclick="copyPrev(this)">Copy</button></div><pre><code>namespace WebShop.Playwright.Models;
+public sealed class Product
+{
+    public string Name { get; set; } = string.Empty;
+    public int Quantity { get; set; }
+}</code></pre><h3>TestData/products.json</h3><div class="codebar"><span>JSON</span><button class="copy" onclick="copyPrev(this)">Copy</button></div><pre><code>{
+  &quot;products&quot;: [
+    { &quot;name&quot;: &quot;Computing and Internet&quot;, &quot;quantity&quot;: 1 },
+    { &quot;name&quot;: &quot;Fiction&quot;, &quot;quantity&quot;: 2 }
+  ]
+}</code></pre><h3>Utilities/TestDataLoader.cs</h3><div class="codebar"><span>CSHARP</span><button class="copy" onclick="copyPrev(this)">Copy</button></div><pre><code>using System.Text.Json;
+using WebShop.Playwright.Models;
+namespace WebShop.Playwright.Utilities;
+public static class TestDataLoader
+{
+    public static IReadOnlyList&lt;Product&gt; LoadProducts(string path)
+    {
+        var json = File.ReadAllText(path);
+        var data = JsonSerializer.Deserialize&lt;ProductData&gt;(json,
+            new JsonSerializerOptions { PropertyNameCaseInsensitive = true });
+        return data?.Products ?? throw new InvalidDataException(&quot;Products missing&quot;);
+    }
+    private sealed class ProductData
+    {
+        public List&lt;Product&gt; Products { get; set; } = [];
+    }
+}</code></pre><h3>Copy JSON file to test output</h3><div class="codebar"><span>XML</span><button class="copy" onclick="copyPrev(this)">Copy</button></div><pre><code>&lt;ItemGroup&gt;
+  &lt;None Update=&quot;TestData\products.json&quot; CopyToOutputDirectory=&quot;PreserveNewest&quot; /&gt;
+&lt;/ItemGroup&gt;</code></pre><p>Load with <code>Path.Combine(AppContext.BaseDirectory, "TestData", "products.json")</code>.</p><div class="prompt"><div class="prompthead">GITHUB COPILOT PROMPT <button onclick="copyPrompt(this)">Copy prompt</button></div><pre>Using Models/Product.cs, TestData/products.json and Utilities/TestDataLoader.cs, propose NUnit TestCaseSource cases for multiple books. Preserve test isolation, report failures by product, reject order-dependent tests, and avoid sharing one mutable cart in parallel. Explain design first; then generate only the new test method.</pre></div><div class="bottomnav"><a href="#test">← Previous</a><a href="#debug">Next →</a></div></section><section id="debug" class="lesson"><div class="kicker">TRAINER WORKSHOP</div><h2>10 · Industrial Challenges &amp; Fixes</h2><table><thead><tr><th>Observed problem</th><th>Likely root cause</th><th>Better solution</th></tr></thead><tbody><tr><td>Strict mode violation</td><td>Multiple Books links</td><td>Scope to top menu; use semantic role + exact name</td></tr><tr><td>Intermittent timeout</td><td>Wrong locator, blocked UI, slow state change</td><td>Inspect DOM, trace, and retrying assertions; no fixed sleeps</td></tr><tr><td>Wrong cart quantity</td><td>Dirty user account or previous cart contents</td><td>Establish explicit clean test data precondition</td></tr><tr><td>Book not found</td><td>Different title, unavailable book, site changes</td><td>Inspect accessible names; fail with meaningful assertion</td></tr><tr><td>Login unreliable</td><td>Account, rate limit, environment or auth issue</td><td>Capture redacted diagnostics; don't bypass login</td></tr><tr><td>Tests fail in parallel</td><td>Shared mutable account/cart</td><td>Separate accounts/data; controlled setup and cleanup</td></tr></tbody></table><div class="prompt"><div class="prompthead">GITHUB COPILOT PROMPT <button onclick="copyPrompt(this)">Copy prompt</button></div><pre>Analyze my Playwright failure using the NUnit message, locator, screenshot and trace. Classify it as selector, synchronization, test data, environment, business logic or application defect. Propose minimum-risk repair, identify verification steps, and avoid increasing timeouts arbitrarily. Do not delete assertions.</pre></div><h3>Screenshot for diagnostics</h3><div class="codebar"><span>CSHARP</span><button class="copy" onclick="copyPrev(this)">Copy</button></div><pre><code>await Page.ScreenshotAsync(new()
+{
+    Path = &quot;failure-diagnostic.png&quot;,
+    FullPage = true
+});</code></pre><div class="note">Screenshots, test traces and logs can reveal credentials or customer information. Restrict them to approved non-sensitive test data.</div><div class="bottomnav"><a href="#data">← Previous</a><a href="#instructions">Next →</a></div></section><section id="instructions" class="lesson"><div class="kicker">TRAINER WORKSHOP</div><h2>11 · Copilot Instructions &amp; Review</h2><p>Provide repository guidance to improve Copilot consistency. Create <code>.github/copilot-instructions.md</code>:</p><div class="codebar"><span>MARKDOWN</span><button class="copy" onclick="copyPrev(this)">Copy</button></div><pre><code># WebShop C# Playwright Standards
+- Use C# and Microsoft.Playwright.NUnit with NUnit.
+- Keep test setup in Base, UI interactions in Pages, business assertions in Tests.
+- Store domain data in Models and external datasets in TestData.
+- Use async/await and stable, unique, verified locators.
+- Prefer semantic locators and retrying Playwright assertions.
+- Never use Thread.Sleep to mask synchronization bugs.
+- Never duplicate PageTest browser lifecycle.
+- Never hardcode credentials or commit secrets.
+- Avoid shared mutable test state and order-dependent tests.
+- Explain diffs and preserve passing behavior when refactoring.
+- Do not invent DOM selectors or remove assertions to make tests pass.
+- Build and run focused tests after each change.</code></pre><div class="prompt"><div class="prompthead">GITHUB COPILOT PROMPT <button onclick="copyPrompt(this)">Copy prompt</button></div><pre>Review this C# Playwright NUnit repository as a senior SDET. Examine POM boundaries, locator resilience, waits, test isolation, security, duplication, assertion quality, parallel risks, diagnostics and CI readiness. Classify each issue as Critical/Major/Minor, include file, reason, proposed change and risk. Do not modify code yet.</pre></div><h3>Copilot working cycle</h3><ol><li>Ask Copilot to inspect the current file and explain proposed changes.</li><li>Specify one small, testable task.</li><li>Review generated diff and verify selectors in browser.</li><li>Run targeted NUnit test and capture evidence.</li><li>Ask Copilot to diagnose exact failure, not to invent a workaround.</li><li>Commit only reviewed and proven code.</li></ol><div class="bottomnav"><a href="#debug">← Previous</a><a href="#comparison">Next →</a></div></section><section id="comparison" class="lesson"><div class="kicker">TRAINER WORKSHOP</div><h2>12 · Selenium vs Playwright</h2><table><tr><th>Topic</th><th>Selenium C#</th><th>Playwright C#</th></tr><tr><td>Driver abstraction</td><td>IWebDriver</td><td>IBrowser / IBrowserContext / IPage</td></tr><tr><td>Element</td><td>IWebElement</td><td>ILocator</td></tr><tr><td>Navigation</td><td>Navigate().GoToUrl()</td><td>GotoAsync()</td></tr><tr><td>Text entry</td><td>SendKeys()</td><td>FillAsync()</td></tr><tr><td>Click</td><td>Click()</td><td>ClickAsync()</td></tr><tr><td>Synchronization</td><td>Explicit waits typically used</td><td>Built-in actionability + retrying assertions</td></tr><tr><td>Test assertions</td><td>NUnit + custom synchronization</td><td>Playwright Expect with NUnit</td></tr><tr><td>Isolation</td><td>Custom driver lifecycle</td><td>PageTest / isolated context fixtures</td></tr><tr><td>Diagnostics</td><td>Driver screenshots + tools</td><td>Screenshots and tracing</td></tr></table><div class="note">Auto-waiting does not replace verifying business outcomes. Playwright waits for actions to become actionable; testers still define the expected state.</div><div class="bottomnav"><a href="#instructions">← Previous</a><a href="#delivery">Next →</a></div></section><section id="delivery" class="lesson"><div class="kicker">TRAINER WORKSHOP</div><h2>13 · 3-Hour Delivery Plan</h2><table><tr><th>Minutes</th><th>Trainer demo</th><th>Outcome</th></tr><tr><td>0–20</td><td>Setup + Copilot conceptual comparison</td><td>Runnable NUnit project</td></tr><tr><td>20–45</td><td>Login flow</td><td>Successful login assertion</td></tr><tr><td>45–65</td><td>Find Books and locator failure</td><td>Correct selected title</td></tr><tr><td>65–85</td><td>Add to Cart</td><td>Product + quantity assertions</td></tr><tr><td>85–120</td><td>Incremental POM refactor</td><td>Reusable page classes</td></tr><tr><td>120–140</td><td>Models + JSON + TestCaseSource design</td><td>Externalized data</td></tr><tr><td>140–160</td><td>Failure investigation</td><td>Root-cause methods</td></tr><tr><td>160–180</td><td>Copilot review + assessment</td><td>Reviewed implementation</td></tr></table><h3>Final challenge</h3><p>An existing registered customer logs in, navigates to Books, selects <strong>Fiction</strong>, adds quantity <strong>2</strong>, and verifies the correct product and quantity. Reuse the existing POM and have Copilot suggest rather than replace engineering decisions.</p><div class="checks"><label><input type="checkbox"> Login independently verified</label><label><input type="checkbox"> Book locator unique and correct</label><label><input type="checkbox"> Add-to-cart notification asserted</label><label><input type="checkbox"> Cart quantity asserted</label><label><input type="checkbox"> No sleeps / hardcoded passwords</label><label><input type="checkbox"> Copilot diff reviewed and tests rerun</label></div><div class="bottomnav"><a href="#comparison">← Previous</a><a href="#references">Next →</a></div></section><section id="references" class="lesson"><div class="kicker">TRAINER WORKSHOP</div><h2>14 · References &amp; Trainer Notes</h2><p>Use these external resources during class (internet needed for these links, not for rendering this tutorial):</p><ul><li><a target="_blank" href="https://demowebshop.tricentis.com/">Tricentis Demo Web Shop</a></li><li><a target="_blank" href="https://playwright.dev/dotnet/docs/intro">Playwright for .NET</a></li><li><a target="_blank" href="https://playwright.dev/dotnet/docs/test-runners">Playwright .NET test runners</a></li><li><a target="_blank" href="https://playwright.dev/dotnet/docs/locators">Playwright locator guidance</a></li><li><a target="_blank" href="https://docs.github.com/en/copilot/how-tos/configure-custom-instructions/add-repository-instructions">GitHub Copilot repository instructions</a></li></ul><div class="note"><strong>Accuracy note:</strong> The example selectors and book availability are based on the instructional scenario; verify them live. The code snippets have not been executed against the website in this artifact creation step. Some source code blocks are alternatives/stages and should not all be pasted into one file. Correct namespace alignment and remove the default template test as appropriate.</div><div class="bottomnav"><a href="#delivery">← Previous</a><a href="#references" style="visibility:hidden">Next →</a></div></section><section class="lesson" id="copilot-features"><div class="kicker">NEW · COPILOT WORKFLOW EXTENSION</div><h2>15 · Copilot Feature Map for Experienced Selenium Testers</h2><p><strong>Trainer message:</strong> Demonstrate that context, tools, permissions and verification—not prompt length alone—determine the usefulness of AI-assisted automation. Start from the already completed registration demo and move through Login → Books → Computing and Internet → Add to cart → Verify cart.</p><div class="callout"><strong>Version note (October 2026):</strong> Command names and availability vary by VS Code version, chat surface, agent harness and extensions. Type <code>#</code>, <code>/</code> or <code>@</code> in your own VS Code chat to inspect available options. <code>#codebase</code> is the current explicit codebase-search reference; <code>@workspace</code> appears in older examples and some configurations. <code>/debug</code> is documented for the separate GitHub Copilot app to export session debug data, not as a universal VS Code command for debugging your NUnit test. Prefer <code>/fix</code> with error context in VS Code.</div><table><thead><tr><th>Feature</th><th>When to show it</th><th>Expected learning</th></tr></thead><tbody>
+<tr><td>Inline suggestions / Tab</td><td>Writing a locator property in LoginPage.cs</td><td>Accept, reject or partially accept suggestions; don't trust guessed selectors</td></tr>
+<tr><td>Inline Chat (Ctrl+I)</td><td>Refactor one selected method</td><td>Small scoped edit; inspect diff</td></tr>
+<tr><td>Chat Ask / question</td><td>Selenium vs Playwright</td><td>Understand before changing files</td></tr>
+<tr><td>Chat Agent</td><td>Create BooksPage and ProductPage with permission</td><td>Multi-file implementation, build, test, review</td></tr>
+<tr><td><code>#</code> file attachment</td><td>Reference LoginPage.cs and ShoppingCartTests.cs</td><td>Precise grounding</td></tr>
+<tr><td><code>#selection</code></td><td>Only the highlighted method</td><td>Reduce irrelevant context</td></tr>
+<tr><td><code>#codebase</code> / legacy <code>@workspace</code></td><td>Find where navigation/cart flow resides</td><td>Workspace search vs attaching a whole repository</td></tr>
+<tr><td><code>#terminalSelection</code></td><td>Failed dotnet test output</td><td>Evidence-based diagnosis</td></tr>
+<tr><td><code>/explain</code>, <code>/fix</code>, <code>/tests</code>, <code>/plan</code></td><td>Explain, repair, generate, plan</td><td>Intent-specific workflows</td></tr>
+<tr><td>Custom instructions / prompt files</td><td>Standardize all POM changes</td><td>Reusable team conventions</td></tr>
+<tr><td>Model selection and approvals</td><td>Compare planning vs small edits</td><td>Capability, cost and execution controls</td></tr>
+<tr><td>MCP / tool extensions</td><td>Optional browser and GitHub integration</td><td>Tools provide observations; never fabricate DOM</td></tr>
+</tbody></table><p>Official references: <a href="https://code.visualstudio.com/docs/chat/copilot-chat-context">Add context</a>, <a href="https://code.visualstudio.com/docs/agents/reference/ai-features-cheat-sheet">AI features cheat sheet</a>, and <a href="https://code.visualstudio.com/docs/agents/overview">Build with AI in VS Code</a>.</p></section>
+<section class="lesson" id="copilot-context"><div class="kicker">LIVE DEMO · CONTEXT</div><h2>16 · #file, #selection, #codebase, @workspace and Terminal Context</h2><p><strong>Before prompting:</strong> Open the correct project folder as the workspace. In Chat, type <code>#</code>, select the intended file, and verify that an attachment appears. For some VS Code versions, choose <em>Add Context → Files & Folders</em> rather than typing literal <code>#file:</code>. A typed filename that is not resolved as an attachment is merely text.</p>
+<div class="prompt"><strong>Demo A — Explicit LoginPage file</strong><pre><code>Attach #LoginPage.cs using the chat context picker.
+Explain how LoginAsync fills Email and Password and clicks the Log in control.
+Compare each operation with a Selenium C# equivalent.
+Identify unverified CSS selectors and missing success assertions.
+Do not edit files.</code></pre><button onclick="copyText(this.previousElementSibling.innerText,this)">Copy Copilot prompt</button></div>
+<div class="prompt"><strong>Demo B — Compare two files</strong><pre><code>Attach #LoginPage.cs and #ShoppingCartTests.cs.
+Explain which responsibilities belong in the Page Object and which belong in NUnit tests.
+Identify duplicated locators or inappropriate business assertions in Page Objects.
+Propose only one refactoring change; do not edit yet.</code></pre><button onclick="copyText(this.previousElementSibling.innerText,this)">Copy Copilot prompt</button></div>
+<div class="prompt"><strong>Demo C — Selected code only</strong><pre><code>Highlight the AddToCartAsync method, then use #selection if shown in this chat surface.
+Review only the selected method for quantity validation, selector stability,
+async usage and Playwright auto-waiting. Keep behavior unchanged.</code></pre><button onclick="copyText(this.previousElementSibling.innerText,this)">Copy Copilot prompt</button></div>
+<div class="prompt"><strong>Demo D — Repository-wide search</strong><pre><code>#codebase Find all code paths that handle login, Books navigation,
+product selection, Add to Cart, and shopping-cart verification.
+Give a file-by-file execution map. Do not modify anything.
+If #codebase is unavailable, use the context picker or ask the agent to search the workspace.</code></pre><button onclick="copyText(this.previousElementSibling.innerText,this)">Copy Copilot prompt</button></div>
+<div class="prompt"><strong>Demo E — Legacy @workspace (only if offered)</strong><pre><code>@workspace Where is the authenticated customer journey implemented?
+Identify each Page Object and the NUnit test that invokes it.
+Explain which files need changing to make book names data-driven.</code></pre><button onclick="copyText(this.previousElementSibling.innerText,this)">Copy Copilot prompt</button></div>
+<div class="prompt"><strong>Demo F — Ground a diagnosis in terminal output</strong><pre><code>Run dotnet test and select the exception lines in the integrated terminal.
+Attach #terminalSelection (or Add Context → Terminal).
+/fix Diagnose this exact NUnit/Playwright failure from the actual stack trace.
+Classify it as locator, application state, test-data state, authentication or timing.
+Suggest the smallest safe fix. Do not add Thread.Sleep.</code></pre><button onclick="copyText(this.previousElementSibling.innerText,this)">Copy Copilot prompt</button></div>
+<div class="callout"><strong>Trainer comparison:</strong> Ask once with the vague prompt “Fix cart test”, then ask again with the relevant files and terminal failure. Compare accuracy, unsupported assumptions and number of review steps. Context items like <code>#codebase</code> ask Copilot to search; they do not put every repository file into the model context.</div></section>
+<section class="lesson" id="copilot-commands"><div class="kicker">LIVE DEMO · COMMANDS</div><h2>17 · Slash Commands and @ Participants: What to Use and What Not to Assume</h2><table><thead><tr><th>Input</th><th>Demo prompt</th><th>Caution</th></tr></thead><tbody><tr><td><code>/explain</code></td><td>Explain the selected Playwright Locator and Selenium equivalent</td><td>Available commands depend on interface</td></tr><tr><td><code>/fix</code></td><td>Fix the strict-mode error with attached failure</td><td>First provide evidence, then verify the correction</td></tr><tr><td><code>/tests</code></td><td>Generate NUnit cases for ProductPage.cs</td><td>Review assertions and data setup</td></tr><tr><td><code>/plan</code></td><td>Plan conversion of a monolithic test to POM</td><td>Review plan before allowing edits</td></tr><tr><td><code>/doc</code></td><td>Add XML documentation for page methods</td><td>Mostly an inline-chat workflow</td></tr><tr><td><code>/compact</code></td><td>Reduce old conversation context</td><td>Reattach critical files afterward</td></tr><tr><td><code>@workspace</code></td><td>Legacy workspace questions</td><td>Use <code>#codebase</code> if this is not offered</td></tr><tr><td><code>@terminal</code></td><td>Explain a PowerShell command (where offered)</td><td>May differ from newer <code>#terminalSelection</code> context</td></tr><tr><td><code>@github</code></td><td>GitHub issues and PR context (where supported)</td><td>Requires suitable integration/permissions</td></tr><tr><td><code>/debug</code></td><td>Not a standard VS Code NUnit-debug shortcut</td><td>Separate GitHub Copilot app uses it to export session debug JSON</td></tr></tbody></table>
+<div class="prompt"><strong>Demo G — /explain on a Playwright method</strong><pre><code>/explain Explain why Playwright ILocator is different from Selenium IWebElement,
+how click auto-waiting works, and why ToHaveTextAsync retries.
+Use examples from the selected LoginPage.cs method.</code></pre><button onclick="copyText(this.previousElementSibling.innerText,this)">Copy Copilot prompt</button></div>
+<div class="prompt"><strong>Demo H — /tests with controlled scope</strong><pre><code>/tests Generate NUnit test scenarios for ProductPage.AddToCartAsync.
+Include quantity 1, quantity 2, invalid quantity 0, missing product,
+and existing-cart-state risks. Mark which are UI scenarios and which
+can be unit tests. Do not run against shared accounts without isolation.</code></pre><button onclick="copyText(this.previousElementSibling.innerText,this)">Copy Copilot prompt</button></div>
+<div class="prompt"><strong>Demo I — /plan before POM refactor</strong><pre><code>/plan Refactor the passing login-to-cart NUnit test into
+LoginPage, HomePage, BooksPage, ProductPage and CartPage.
+Preserve PageTest lifecycle; avoid duplicate browser setup.
+Describe each new file, dependencies, assertions and validation steps.
+Do not change any source code yet.</code></pre><button onclick="copyText(this.previousElementSibling.innerText,this)">Copy Copilot prompt</button></div>
+</section>
+<section class="lesson" id="copilot-modes"><div class="kicker">LIVE DEMO · EDITING</div><h2>18 · Ask → Plan → Inline Edit → Agent: A Safe Progressive Workflow</h2><ol><li><strong>Ask:</strong> explain the existing working login test without edits.</li><li><strong>Plan:</strong> propose POM files, validation conditions and test risks.</li><li><strong>Inline Chat:</strong> highlight only <code>LoginAsync</code>, press <kbd>Ctrl+I</kbd>, and request a small improvement.</li><li><strong>Agent:</strong> let Copilot create one missing page object, build and run the targeted NUnit test—only with reviewed tool/terminal permissions.</li><li><strong>Review changes:</strong> inspect the diff, run <code>dotnet build</code> and <code>dotnet test</code>, then accept or revert.</li></ol>
+<div class="prompt"><strong>Demo J — Inline Chat (Ctrl+I)</strong><pre><code>Change only this selected LoginAsync method to validate empty arguments
+without altering its public signature or any CSS selectors.
+Show a minimal diff. Do not modify other files.</code></pre><button onclick="copyText(this.previousElementSibling.innerText,this)">Copy Copilot prompt</button></div>
+<div class="prompt"><strong>Demo K — Agent with narrow, verifiable goal</strong><pre><code>Implement BooksPage.cs for locating the exact product
+&quot;Computing and Internet&quot; in the current WebShop.Playwright project.
+First inspect existing style and instructions. Modify BooksPage.cs only.
+Then run dotnet build and report the result. Do not change tests,
+install packages or make network calls unless separately approved.
+Stop and ask for review if the website DOM cannot be verified.</code></pre><button onclick="copyText(this.previousElementSibling.innerText,this)">Copy Copilot prompt</button></div>
+<div class="callout"><strong>Agent safety:</strong> Use a disposable training repository and test credentials, inspect proposed command execution, and do not enable broad unreviewed permissions. Do not let the agent infer that a test passed merely because a compile succeeded.</div></section>
+<section class="lesson" id="copilot-prompts"><div class="kicker">REUSABLE CUSTOMIZATIONS</div><h2>19 · Repository Instructions, Prompt Files and Focused Agents</h2><p>Create a repository-wide policy, then use task-specific reusable prompts. The core tutorial already includes <code>.github/copilot-instructions.md</code>; the following is a stronger extension.</p>
+<h4>.github/copilot-instructions.md — add or merge</h4><pre><code># Playwright NUnit Engineering Rules
+- Framework: .NET 10, C#, Microsoft.Playwright.NUnit.
+- Use Playwright PageTest; do not recreate browser in every test.
+- POM: page objects contain locators/actions; test classes own business assertions.
+- Prefer unique role/label/test-id locators; validated CSS is acceptable.
+- Never fabricate selectors. Mark any unverified DOM assumption.
+- No Thread.Sleep; use actionability and retrying assertions.
+- Keep secrets outside repository and redact output/screenshots.
+- Do not weaken or remove assertions just to make a test green.
+- Identify test-state preconditions; never assume the shared cart is clean.
+- Make one focused change, explain impact, build, and run targeted tests.
+- Report what was actually executed versus what remains unverified.</code></pre>
+<h4>.github/prompts/playwright-debug.prompt.md</h4><pre><code>---
+description: Diagnose a failing Playwright NUnit test from attached evidence
+---
+Analyze the failing test using the attached file(s), terminal output,
+and trace/screenshots if provided. Identify the likely root cause,
+confidence and evidence. Distinguish locator failure, synchronization,
+application defect, authentication and dirty test data.
+Propose the smallest safe change; do not introduce Thread.Sleep.
+Do not edit files before presenting the diagnosis.</code></pre>
+<h4>.github/prompts/playwright-review.prompt.md</h4><pre><code>---
+description: Review a C# Playwright POM change against SDET standards
+---
+Review selected or attached C# Playwright files for locator resilience,
+async correctness, PageTest lifecycle, assertions, test-data isolation,
+secret handling and flaky behavior. Prioritize findings and propose
+minimal diffs. Do not claim test execution unless logs verify it.</code></pre>
+<p>In a VS Code Local harness session, prompt files may appear as slash commands such as <code>/playwright-debug</code> and <code>/playwright-review</code>. Availability is version/harness dependent; use <code>/</code> to discover. For complex role-specific behavior, create a dedicated reviewer custom agent through the customization UI. Prompt files are manually invoked, while repository instructions are loaded according to discovery rules. <a href="https://code.visualstudio.com/docs/agent-customization/prompt-files">Prompt files documentation</a>.</p></section>
+<section class="lesson" id="copilot-advanced"><div class="kicker">ADVANCED FEATURES</div><h2>20 · Model Choice, Context Hygiene, Images, MCP, GitHub and Test Reviews</h2><table><thead><tr><th>Capability</th><th>Demonstration</th><th>Guardrail</th></tr></thead><tbody><tr><td>Model picker</td><td>Ask two available models to review the same failing locator; compare evidence and review quality</td><td>Available models and premium usage vary by plan</td></tr><tr><td>Context hygiene</td><td>Use new chat or <code>/compact</code> after unrelated debugging; reattach relevant files</td><td>Long chat history can bias answers</td></tr><tr><td>Image attachment</td><td>Attach a Demo Web Shop screenshot and ask what UI to inspect</td><td>Image alone cannot prove exact DOM selector</td></tr><tr><td>Integrated browser / tools</td><td>If available, inspect live elements and attach observed HTML</td><td>Tool availability varies; verify observed DOM</td></tr><tr><td>Source control diff</td><td>Review AI-generated changes before committing</td><td>Build/test remains mandatory</td></tr><tr><td>GitHub PR review</td><td>Ask for risk-ranked review of locator and test changes</td><td>GitHub repository and appropriate access required</td></tr><tr><td>MCP tools</td><td>Optional browser or test tool integration for grounded agent actions</td><td>Install only trusted MCP servers with minimal permissions</td></tr><tr><td>Chat debug view / agent logs</td><td>Inspect why instructions or file context were not applied</td><td>Different from debugging the C# application</td></tr></tbody></table>
+<div class="prompt"><strong>Demo L — Screenshot as evidence</strong><pre><code>I attached a screenshot of Demo Web Shop after Add to Cart.
+Identify the UI state and what needs verification.
+Do not invent CSS selectors from the screenshot.
+Tell me what to inspect in browser DevTools to confirm exact locators.</code></pre><button onclick="copyText(this.previousElementSibling.innerText,this)">Copy Copilot prompt</button></div>
+<div class="prompt"><strong>Demo M — Code review from source-control diff</strong><pre><code>Review my uncommitted changes for ShoppingCartTests.cs and its Page Objects.
+Find brittle selectors, unverified assumptions, unnecessary waits,
+unsafe test data handling and missing business assertions.
+Rank findings Critical/Major/Minor; do not modify files.</code></pre><button onclick="copyText(this.previousElementSibling.innerText,this)">Copy Copilot prompt</button></div>
+</section>
+<section class="lesson" id="copilot-challenges"><div class="kicker">TRAINER DEMOS · INDUSTRY FAILURES</div><h2>21 · Six High-Value Failure Demonstrations</h2><table><thead><tr><th>Inject problem</th><th>Context to give Copilot</th><th>Expected resolution</th></tr></thead><tbody><tr><td>Ambiguous Books link</td><td>Locator code + strict-mode exception</td><td>Scope to top-menu and exact role link</td></tr><tr><td>Wrong book chosen</td><td>BooksPage + screenshot/product list</td><td>Exact accessible name + product-title assertion</td></tr><tr><td>Cart count = 2</td><td>Cart row + test account precondition</td><td>Start from controlled cart state</td></tr><tr><td>Hard-coded Thread.Sleep</td><td>Selected method</td><td>Auto-wait, expect notification, validate row</td></tr><tr><td>Password leaked in test log</td><td>Relevant log code</td><td>Environment variable, redaction and secure CI secret</td></tr><tr><td>POM duplicating browser setup</td><td>TestBase + PageTest + NUnit test</td><td>Single Playwright-managed lifecycle</td></tr></tbody></table><p><strong>Mandatory instructor debrief:</strong> What input did Copilot need? What did it change? What was objectively verified? What remains an assumption? Would the fix survive parallel execution and CI?</p></section>
+<section class="lesson" id="copilot-schedule"><div class="kicker">DELIVERY PLAN · 75 MIN EXTENSION</div><h2>22 · Suggested Live Feature Demonstration Sequence</h2><table><thead><tr><th>Minutes</th><th>Activity</th><th>Outcome</th></tr></thead><tbody><tr><td>00–10</td><td>Show vague vs grounded prompt with #file</td><td>Understand explicit context</td></tr><tr><td>10–20</td><td>#selection, #codebase and @workspace availability</td><td>Understand context scope</td></tr><tr><td>20–30</td><td>/explain and /tests on LoginPage.cs</td><td>Understand explanations and generation</td></tr><tr><td>30–45</td><td>#terminalSelection + /fix on intentional failure</td><td>Evidence-based debugging</td></tr><tr><td>45–55</td><td>/plan, Ctrl+I, controlled Agent change</td><td>Safe incremental refactoring</td></tr><tr><td>55–65</td><td>Custom instructions and a reusable prompt file</td><td>Team consistency</td></tr><tr><td>65–75</td><td>Diff review, build, targeted test, wrap-up</td><td>Verified changes, not blind acceptance</td></tr></tbody></table><div class="callout"><strong>Final exercise:</strong> Ask participants to attach their <code>BooksPage.cs</code>, run <code>#codebase</code> to locate cart tests, deliberately break one locator, include <code>#terminalSelection</code> with the failure, use <code>/fix</code> to propose a correction, and show a passing targeted NUnit test. Require a before/after diff and explanation of each decision.</div><p>Supplementary sources: <a href="https://code.visualstudio.com/docs/chat/chat-overview">VS Code Chat</a>, <a href="https://code.visualstudio.com/docs/chat/inline-chat">Inline chat</a>, <a href="https://code.visualstudio.com/docs/agents/agent-troubleshooting/chat-debug-view">Agent troubleshooting</a>, <a href="https://docs.github.com/en/copilot/reference/github-copilot-app-reference/slash-commands?plain=1">GitHub Copilot app commands</a>.</p><div class="bottomnav"><a href="#references">← Original references</a><a href="#overview">Back to start →</a></div></section></div></main><footer>Instructor workbook · C# Playwright with GitHub Copilot · Verify all demonstration selectors live</footer><script>
+function copyText(s,button){navigator.clipboard.writeText(s).then(()=>{let old=button.textContent;button.textContent='Copied!';setTimeout(()=>button.textContent=old,1400)}).catch(()=>{let area=document.createElement('textarea');area.value=s;document.body.appendChild(area);area.select();document.execCommand('copy');area.remove();button.textContent='Copied!';setTimeout(()=>button.textContent='Copy',1400)})}function copyPrev(b){copyText(b.parentNode.nextElementSibling.innerText,b)}function copyPrompt(b){copyText(b.closest('.prompt').querySelector('pre').innerText,b)}const search=document.getElementById('search');search.addEventListener('input',()=>{let q=search.value.toLowerCase();document.querySelectorAll('nav a').forEach(a=>a.style.display=a.textContent.toLowerCase().includes(q)?'':'none')});const links=[...document.querySelectorAll('nav a')];function active(){let s=location.hash.slice(1)||'overview';links.forEach(a=>a.classList.toggle('active',a.dataset.target===s))}window.addEventListener('hashchange',active);active();
+</script></body></html>
